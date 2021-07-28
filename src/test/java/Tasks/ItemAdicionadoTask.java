@@ -1,7 +1,6 @@
 package Tasks;
 
 import PageObjects.ItemAdicionadoPage;
-import PageObjects.PrincipalPage;
 import org.openqa.selenium.WebDriver;
 
 public class ItemAdicionadoTask {

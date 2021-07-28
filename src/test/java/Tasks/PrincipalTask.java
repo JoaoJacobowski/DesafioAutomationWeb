@@ -1,9 +1,10 @@
 package Tasks;
 
 import PageObjects.ItemAdicionadoPage;
-import PageObjects.ItemProdutoPage;
 import PageObjects.PrincipalPage;
+import Utils.FileOperations;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class PrincipalTask {
     private WebDriver driver;
@@ -18,7 +19,11 @@ public class PrincipalTask {
 
     public void adicionaItemAoCarrinho(){
         String produtoTexto = principalPage.getNameProductText().getText();
+        Actions action = new Actions(driver);
 
+        FileOperations.setProperties("data", "valorProduto", principalPage.getValorProdutoText().getText());
+
+        action.moveToElement(principalPage.getProductImageLink()).build().perform();
         principalPage.getIncluirNoCarrinhoButton().click();
 
     }

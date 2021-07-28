@@ -26,4 +26,8 @@ public class PrincipalPage{
         return waits.visibilityOfElement(By.xpath("//*[@id=\"homefeatured\"]/li[4]/div/div[2]/div[2]/a[1]"));
     }
 
+    public WebElement getValorProdutoText(){
+        return waits.visibilityOfElement(By.xpath("//*[@id=\"homefeatured\"]/li[4]/div/div[2]/div[1]/span"));
+    }
+
 }
